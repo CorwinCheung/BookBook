@@ -1,0 +1,39 @@
+.fancy {
+    position: relative;
+    padding: 4rem;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .fancy::before {
+    content: "";
+  
+    position: absolute;
+    z-index: -1;
+    bottom: 15px;
+    right: 5px;
+    width: 50%;
+    top: 80%;
+    max-width: 200px;
+  
+    box-shadow: 0px 13px 10px black;
+    rotate: 4deg;
+  }
+
+  .fancy, .fancy2 {
+    display: inline-block;
+    margin:20px;
+  }
+  
+
+  ul {
+    list-style: none;
+    text-align: left;
+    list-style-position: inside;
+}
+
+ul li:before
+{
+    content: '\2605';
+    /* margin: 0 1em;    any design */
+}
