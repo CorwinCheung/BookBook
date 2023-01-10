@@ -24,8 +24,6 @@
     display: inline-block;
     margin:20px;
   }
-  
-
   ul {
     list-style: none;
     text-align: left;
@@ -36,4 +34,9 @@ ul li:before
 {
     content: '\2605';
     /* margin: 0 1em;    any design */
+}
+.column-wide{
+    justify-items: center;
+    margin-left: -6%;
+    margin-right: -6%;
 }
