@@ -20,13 +20,13 @@
               //get the edited element content
               var userVersion = editElem.innerHTML;
               //save the content to local storage
-              localStorage.userEdits=userVersion;
+              localStorage.setItem("List1", userVersion); 
               //write a confirmation to the user
               document.getElementById("update").innerHTML="Edits saved!";
             }
             function checkEdits() {
               if(localStorage.userEdits!=null)
-              document.getElementById ("edit").innerHTML = localStorage.userEdits;
+              document.getElementById("edit").innerHTML = localStorage.getItem("List1"); 
             }
             function saveEdits2(){
               //get the editable element
@@ -34,13 +34,13 @@
               //get the edited element content
               var userVersion = editElem.innerHTML;
               //save the content to local storage
-              localStorage.userEdits=userVersion;
+              localStorage.setItem("List2", userVersion); 
               //write a confirmation to the user
               document.getElementById("update2").innerHTML="Edits saved!";
             }
             function checkEdits2() {
               if(localStorage.userEdits!=null)
-              document.getElementById ("edit2").innerHTML = localStorage.userEdits;
+              document.getElementById("edit2").innerHTML = localStorage.getItem("List2"); 
             }
             function saveEdits3(){
               //get the editable element
@@ -48,13 +48,13 @@
               //get the edited element content
               var userVersion = editElem.innerHTML;
               //save the content to local storage
-              localStorage.userEdits=userVersion;
+              localStorage.setItem("List3", userVersion); 
               //write a confirmation to the user
               document.getElementById("update3").innerHTML="Edits saved!";
             }
             function checkEdits3() {
               if(localStorage.userEdits!=null)
-              document.getElementById ("edit3").innerHTML = localStorage.userEdits;
+              document.getElementById("edit3").innerHTML = localStorage.getItem("List3"); 
             }
             function saveEdits4(){
               //get the editable element
@@ -62,13 +62,13 @@
               //get the edited element content
               var userVersion = editElem.innerHTML;
               //save the content to local storage
-              localStorage.userEdits=userVersion;
+              localStorage.setItem("List4", userVersion); 
               //write a confirmation to the user
               document.getElementById("update4").innerHTML="Edits saved!";
             }
             function checkEdits4() {
               if(localStorage.userEdits!=null)
-              document.getElementById ("edit4").innerHTML = localStorage.userEdits;
+              document.getElementById("edit4").innerHTML = localStorage.getItem("List4"); 
             }
             function saveEdits5(){
               //get the editable element
@@ -76,13 +76,13 @@
               //get the edited element content
               var userVersion = editElem.innerHTML;
               //save the content to local storage
-              localStorage.userEdits=userVersion;
+              localStorage.setItem("List5", userVersion); 
               //write a confirmation to the user
               document.getElementById("update5").innerHTML="Edits saved!";
             }
             function checkEdits5() {
               if(localStorage.userEdits!=null)
-              document.getElementById ("edit5").innerHTML = localStorage.userEdits;
+              document.getElementById("edit5").innerHTML = localStorage.getItem("List5"); 
             }
             function saveEdits6(){
               //get the editable element
@@ -90,17 +90,18 @@
               //get the edited element content
               var userVersion = editElem.innerHTML;
               //save the content to local storage
-              localStorage.userEdits=userVersion;
+              localStorage.setItem("List6", userVersion); 
               //write a confirmation to the user
               document.getElementById("update6").innerHTML="Edits saved!";
             }
             function checkEdits6() {
               if(localStorage.userEdits!=null)
-              document.getElementById ("edit6").innerHTML = localStorage.userEdits;
+              document.getElementById("edit6").innerHTML = localStorage.getItem("List6"); 
             }
             </script>
     </head>
     <body onload="checkEdits(), checkEdits2(), checkEdits3(), checkEdits4(), checkEdits5(), checkEdits6()">
+    <!-- <body> -->
         <!-- Header -->
         <div class="templatemo-container">
             <div class="templatemo-block-left">
@@ -143,7 +144,7 @@
                 <div class="fancy" style = "background-color: rgb(246, 107, 89)">
                     <h3>Corwin's Books!!</h3>
                     <div id="edit" contenteditable="true">
-                    <ul style="list-style-type: '&#x1F514; ';">
+                    <ul>
                     <li> Norwegian Wood - Haruki Murakami</li>
                     <li>So Good They Can't Ignore You - Cal Newport</li>
                     <li>Thinking in Bets - Annie Duke</li>
