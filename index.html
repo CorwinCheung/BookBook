@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function saveEdits(){
+  //get the editable element
+  var editElem = document.getElementById("edit");
+  //get the edited element content
+  var userVersion = editElem.innerHTML;
+  //save the content to local storage
+  localStorage.userEdits=userVersion;
+  //write a confirmation to the user
+  document.getElementById("update").innerHTML="Edits saved!";
+}
+function checkEdits() {
+  if(localStorage.userEdits!=null)
+  document.getElementById ("edit").innerHTML = localStorage.userEdits;
+}
+</script>
+</head>
+<body onload="checkEdits()">
+<h3>Corwin's Books!!</h3>
+<div id="edit" contenteditable="true">
+  <ul>
+  <li>Norwegian Wood - Haruki Murakami</li>
+  <li>So Good They Can't Ignore You - Cal Newport</li>
+  <li>Thinking in Bets - Annie Duke</li>
+  <li>Doing Good Better - William MacAskill</li>
+  <li>Deep Thinking - Garry Kasparov</li>
+  </ul>
+</div>
+<input type="button" value="Save Edits" onclick="saveEdits()"/>
+<div id="update">Edit Books and Click to Save!</div>
+</body>
+</html>
