@@ -2,7 +2,8 @@
     position: relative;
     padding: 4rem;
     text-align: center;
-    max-width: 400px;
+    width: 370px;
+    height: 300px;
   }
   
   .fancy::before {
@@ -37,6 +38,8 @@ ul li:before
 }
 .column-wide{
     justify-items: center;
-    margin-left: -6%;
+    margin-left: -3%;
     margin-right: -6%;
 }
+
+div ul{overflow:hidden; overflow-y:scroll;}

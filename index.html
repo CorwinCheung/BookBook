@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -132,6 +132,19 @@
             </div>
         </div> <!-- end Header -->
 
+        <!-- <div>
+            <h2>SQL</h2>
+            <?php
+            $conn = mysqli_connect("localhost","root", "", "sql9590694")
+            $sql = "SELECT * FROM Friend's Books";
+            $result = $conn -> query($sql);
+            if($result -> num_rows > 0){
+                while($row = $result-> fetch_assoc()){
+                    echo "<tr><td>" .row["friend_name"]."</td><td>" .row["books"]."</td><\tr>";
+                }
+            }
+            ?>
+        </div> -->
         <!-- "Our Products" -->
         <section class="container">
             <div class="row">
@@ -143,10 +156,10 @@
                 <br><br><br><br><br><br><br>
                 <div class ="column-wide">
                 <div class="fancy" style = "background-color: rgb(246, 107, 89)">
-                    <h3>Corwin's Books!!</h3>
+                    <h3>Corwin's Books!</h3>
                     <div id="edit" contenteditable="true">
                     <ul>
-                    <li> Norwegian Wood - Haruki Murakami</li>
+                    <li>Norwegian Wood - Haruki Murakami</li>
                     <li>So Good They Can't Ignore You - Cal Newport</li>
                     <li>Thinking in Bets - Annie Duke</li>
                     <li>Doing Good Better - William MacAskill</li>
@@ -159,7 +172,7 @@
                     <div id="update">Edit Books and Click to Save!</div>
                 </div>
                 <div class="fancy" style = "background-color: rgb(255, 155, 96)">
-                    <h3>Alex's Books!!</h3>
+                    <h3>Alex's Books!</h3>
                     <div id="edit2" contenteditable="true">
                     <ul>
                     <li>A Short History of Nearly Everything - Bryson</li>
@@ -175,7 +188,7 @@
                     <div id="update2">Edit Books and Click to Save!</div>
                 </div>
                 <div class="fancy" style = "background-color: rgb(181, 198, 137)">
-                    <h3>Ee Jenn's Books!!</h3>
+                    <h3>Ee Jenn's Books!</h3>
                     <div id="edit3" contenteditable="true">
                     <ul>
                     <li>Deep Learning - Ian Goodfellow</li>
@@ -191,7 +204,7 @@
                     <div id="update3">Edit Books and Click to Save!</div>
                 </div>
                 <div class="fancy" style = "background-color: rgb(67, 171, 201)">
-                    <h3>Rajan's Books!!</h3>
+                    <h3>Rajan's Books!</h3>
                     <div id="edit4" contenteditable="true">
                     <ul>
                     <li>Capitalism and Freedom - Milton Friedman</li>
@@ -207,7 +220,7 @@
                     <div id="update4">Edit Books and Click to Save!</div>
                 </div>
                 <div class="fancy" style = "background-color: rgb(120, 200, 240)">
-                    <h3>Cass' Books!!</h3>
+                    <h3>Cass' Books!</h3>
                     <div id="edit5" contenteditable="true">
                     <ul>
                     <li>Anxious People - Fredrik Backman</li>
@@ -223,7 +236,7 @@
                     <div id="update5">Edit Books and Click to Save!</div>
                 </div>
                 <div class="fancy" style = "background-color: rgb(239, 212, 105)">
-                    <h3>Jane's Books!!</h3>
+                    <h3>Jane's Books!</h3>
                     <div id="edit6" contenteditable="true">
                     <ul>
                     <li>Delivering Happiness - Tony Hsieh</li>
