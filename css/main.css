@@ -21,6 +21,7 @@
     rotate: 4deg;
   }
 
+
   .fancy, .fancy2 {
     display: inline-block;
     margin:20px;
@@ -29,6 +30,11 @@
     list-style: none;
     text-align: left;
     list-style-position: inside;
+}
+
+#edit, #edit2, #edit3, #edit4, #edit5, #edit6 {
+  max-height: 120px;
+  overflow-y: auto;
 }
 
 ul li:before
@@ -42,4 +48,5 @@ ul li:before
     margin-right: -6%;
 }
 
-div ul{overflow:hidden; overflow-y:scroll;}
+div ul{
+  height: 110px;}

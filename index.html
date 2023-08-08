@@ -7,7 +7,7 @@
         <title>BookBook</title>
         <meta name="description" content="BookBook is a place where people can go to list books they would like to exchange with friends and check out what books their friends have listed!">
         <meta name="author" content="Corwin Cheung">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/templatemo-style.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <script type="text/javascript">
@@ -127,33 +127,7 @@
                     <div class="templatemo-header-right-overlay"></div>
                 </div>
             </div>
-        </div> <!-- end Header -->
-
-        <!-- <h2>SQL</h2>
-        <?php
-        $conn = mysqli_connect("sql9.freesqldatabase.com","sql9590694", "f87B9eLzJT", "sql9590694");
-        if (mysqli_connect_errno())
-        {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
-        $sql = "SELECT * FROM Friend's Books";
-        $result = $conn -> query($sql);
-        echo "<table border='1'>
-            <tr>
-            <th>Name</th>
-            <th>Book</th>
-            </tr>";
-
-        while($row = mysqli_fetch_array($result))
-        {
-            echo "<tr>";
-            echo "<td>" . $row['friend_name'] . "</td>";
-            echo "<td>" . $row['books'] . "</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-        ?> -->
-        <!-- "Our Products" -->
+        </div>
         <section class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -162,7 +136,7 @@
                     <p class="text-uppercase templatemo-section-subheader">View All Books</p>
                 </div>
                 <br><br><br><br><br><br><br>
-                <div class ="column-wide">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="fancy" style = "background-color: rgb(246, 107, 89)">
                     <h3>Corwin's Books!</h3>
                     <div id="edit" contenteditable="true">
@@ -179,6 +153,8 @@
                     <br>
                     <div id="update">Edit Books and Click to Save!</div>
                 </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="fancy" style = "background-color: rgb(255, 155, 96)">
                     <h3>Alex's Books!</h3>
                     <div id="edit2" contenteditable="true">
@@ -195,6 +171,8 @@
                     <br>
                     <div id="update2">Edit Books and Click to Save!</div>
                 </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="fancy" style = "background-color: rgb(181, 198, 137)">
                     <h3>Ee Jenn's Books!</h3>
                     <div id="edit3" contenteditable="true">
@@ -211,6 +189,8 @@
                     <br>
                     <div id="update3">Edit Books and Click to Save!</div>
                 </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="fancy" style = "background-color: rgb(67, 171, 201)">
                     <h3>Rajan's Books!</h3>
                     <div id="edit4" contenteditable="true">
@@ -227,6 +207,8 @@
                     <br>
                     <div id="update4">Edit Books and Click to Save!</div>
                 </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="fancy" style = "background-color: rgb(120, 200, 240)">
                     <h3>Cass' Books!</h3>
                     <div id="edit5" contenteditable="true">
@@ -243,6 +225,8 @@
                     <br>
                     <div id="update5">Edit Books and Click to Save!</div>
                 </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="fancy" style = "background-color: rgb(239, 212, 105)">
                     <h3>Jane's Books!</h3>
                     <div id="edit6" contenteditable="true">
@@ -259,11 +243,11 @@
                     <br>
                     <div id="update6">Edit Books and Click to Save!</div>
                 </div>
+                </div>
             </div>
             </div>
-        </section> <!-- end "Our Products" -->
+        </section> 
 
-        <!-- "About Us" -->
         <section class="templatemo-dark-bg">
             <div class="container">
                 <div class="row">
@@ -276,7 +260,7 @@
                     </div>
                 </div>
             </div>
-        </section> <!-- end "About Us" -->
+        </section>
 
         <footer class="text-center">
             <p class="text-uppercase">
@@ -284,9 +268,6 @@
             	| Tech Lead: <a href="https://www.linkedin.com/in/corwincubes/">Corwin Cheung</a>
             </p>
         </footer>
-
-        <!-- <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      jQuery -->
-        <!-- <script type="text/javascript" src="js/templatemo-script.js"></script>      Templatemo Script -->
 
     </body>
 </html>
