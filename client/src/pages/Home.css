@@ -1,0 +1,163 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Banner styling */
+.banner-container {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 0;
+  background: none; /* Remove the background image */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+}
+
+.book-yellow {
+  color: #FFD700; 
+}
+
+/* BookBook color styling */
+.book-green {
+  color: #2E8B57; /* Green color */
+}
+
+.book-red {
+  color: #B22222; /* Red color */
+}
+
+/* Cozy background styling */
+.cozy-background {
+  background: none; /* Remove background image */
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 40px 0; /* Keep padding for spacing */
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+.content-container {
+  background-color: #f8f9fa; /* Use a light, neutral background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 40px auto;
+}
+
+/* Book lists container */
+.book-lists-container {
+  width: 98%; /* Increase from current width */
+  max-width: 1800px; /* Set a much higher max-width */
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* If you need to match your existing book list card styles */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #212529; /* Dark color matching your current theme */
+}
+
+.title-container {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+/* Remove any container width restrictions */
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Keep the 3-column layout but add more gap between cards */
+.book-lists-container .row {
+  display: flex;
+  justify-content: space-between; /* Creates even spacing */
+  gap: 35px; /* Increase spacing between cards */
+}
+
+/* Adjust column width for better proportions */
+.book-lists-container .col {
+  flex: 0 0 auto;
+  width: 30%; /* Increase from typical 33.33% */
+  max-width: none; /* Remove max-width constraints */
+  margin-bottom: 30px; /* Add bottom margin for vertical spacing */
+}
+
+/* Adjust list appearance */
+.list-group-flush {
+  padding-left: 0; /* Remove any left padding on lists */
+  width: 100%; /* Ensure list takes full width */
+}
+
+/* Additional custom responsive adjustments if needed */
+@media (max-width: 992px) {
+  .book-lists-container .col {
+    width: 48%; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .book-lists-container .col {
+    width: 100%; /* One column on mobile */
+  }
+}
+
+/* Adjust main container if needed */
+.container {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Remove any bottom padding/margin from cozy background */
+.cozy-background {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Make sure banner connects directly to navbar */
+.banner-container {
+  margin-top: 0;
+}
+
+

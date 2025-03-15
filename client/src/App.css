@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Add more contrast to the book cards themselves */
+.book-card {
+  /* Add a subtle semi-transparent background to each card */
+  background-color: rgba(255, 255, 255, 0.85);
+  /* Or darken the text color */
+  color: #000;
+  /* Add subtle text shadow for better readability */
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+.book-panel {
+  /* Add styling here */
+  background-color: rgba(255, 255, 255, 0.1); /* Very subtle white overlay */
+  backdrop-filter: blur(3px); /* Creates a frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Remove padding between navbar and banner */
+.navbar {
+  background-color: #343a40; /* Dark background for contrast */
+  color: #fff;
+  margin-bottom: 0;
+  padding-top: 0.6rem !important;    /* Adjust this value as needed */
+  padding-bottom: 0.6rem !important; /* Make sure it's the same as top */
+  width: 100%;
+  position: relative;
+  z-index: 1000; /* Keep navbar above other elements */
+}
+
+/* Override any global container styles for navbar only */
+.navbar .container {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Remove padding from main container */
+main.container.py-4 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Remove any margin from Home component */
+.home-container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
