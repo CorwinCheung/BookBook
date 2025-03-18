@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const fetchBookLists = async () => {
       try {
-        const response = await axios.get('https://bookbook.page/api/booklists');
+        const response = await axios.get('https://bookbook-8xcp.onrender.com/api/booklists');
         setBookLists(response.data);
         setLoading(false);
       } catch (err) {

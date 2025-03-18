@@ -10,8 +10,14 @@ dotenv.config();
 // Initialize Express app
 const app = express();
 
+// Add CORS configuration before your routes
+app.use(cors({
+  origin: 'https://bookbook.page',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 // Middleware
-app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
