@@ -11,7 +11,7 @@ const app = express();
 
 // Add CORS configuration before your routes
 app.use(cors({
-  origin: 'https://bookbook.page',
+  origin: ['https://bookbook.page', 'http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));

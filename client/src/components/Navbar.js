@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container" style={{ maxWidth: '1200px' }}>
         <Link className="navbar-brand" to="/">
-          <span className="book-green">Book</span><span className="book-red">Book</span>
+          <span className="book-green">Book</span><span className="book-aqua">Book</span>
         </Link>
         <button
           className="navbar-toggler"

@@ -44,7 +44,6 @@ const BookCard = ({ owner, books, color }) => {
           {books && books.length > 0 ? (
             books.map((book, index) => (
               <li key={index} className="list-group-item" style={bookItemStyle}>
-                <span className="text-warning me-1">★</span>
                 {book.title} - {book.author}
               </li>
             ))

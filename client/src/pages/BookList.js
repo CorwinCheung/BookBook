@@ -25,7 +25,7 @@ const BookList = () => {
   useEffect(() => {
     const fetchBookList = async () => {
       try {
-        const response = await axios.get(`https://https://bookbook-8xcp.onrender.com/api/booklists/${owner}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/booklists/${owner}`);
         setBookList(response.data);
         setBooks(response.data.books);
         setLoading(false);
@@ -69,7 +69,7 @@ const BookList = () => {
 
   const handleSaveBooks = async () => {
     try {
-      await axios.put(`https://bookbook-8xcp.onrender.com/api/booklists/${owner}`, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/booklists/${owner}`, {
         books: books
       });
       setSuccess('Book list saved successfully!');

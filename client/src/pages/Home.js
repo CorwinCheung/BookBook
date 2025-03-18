@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BookCard from '../components/BookCard';
-import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -9,10 +8,12 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  console.log('Current API URL:', process.env.REACT_APP_API_URL);
+
   useEffect(() => {
     const fetchBookLists = async () => {
       try {
-        const response = await axios.get('https://bookbook-8xcp.onrender.com/api/booklists');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/booklists`);
         setBookLists(response.data);
         setLoading(false);
       } catch (err) {
@@ -55,7 +56,7 @@ const Home = () => {
         
         <div className="banner-overlay">
           <div className="title-container">
-            <h1><span className="book-green">Book</span><span className="book-red">Book</span></h1>
+            <h1><span className="book-green">Book</span><span className="book-aqua">Book</span></h1>
             <p>List your books and see what your friends have listed</p>
           </div>
         </div>
