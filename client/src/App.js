@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import BookList from './pages/BookList';
 import About from './pages/About';
+import UserProfile from './pages/UserProfile';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/booklist/:owner" element={<BookList />} />
+            <Route path="/profile/:owner" element={<UserProfile />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
