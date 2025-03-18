@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const BookList = require('./models/BookList');
+const Profile = require('./models/Profile');
 
 // Load environment variables
 dotenv.config();
@@ -10,8 +11,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/bookbook'
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('MongoDB connected for seeding'))
-.catch(err => console.log('MongoDB connection error:', err));
+.then(() => console.log('Connected to MongoDB for seeding'))
+.catch(err => console.error('Could not connect to MongoDB:', err));
 
 // Initial data based on the current HTML content
 const initialData = [
@@ -68,11 +69,11 @@ const initialData = [
   {
     owner: "Jane",
     books: [
-      { title: "Delivering Happiness", author: "Tony Hsieh" },
-      { title: "The Road to Excellence", author: "Anders Ericsson" },
-      { title: "The Iliad", author: "Homer" },
-      { title: "Thinking, Fast and Slow", author: "Daniel Kahneman" },
-      { title: "The Tao of Pooh", author: "Benjamin Hoff" }
+      { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+      { title: "Pride and Prejudice", author: "Jane Austen" },
+      { title: "1984", author: "George Orwell" },
+      { title: "To Kill a Mockingbird", author: "Harper Lee" },
+      { title: "The Catcher in the Rye", author: "J.D. Salinger" }
     ]
   }
 ];
@@ -82,10 +83,21 @@ const seedDatabase = async () => {
   try {
     // Clear existing data
     await BookList.deleteMany({});
-    console.log('Cleared existing book lists');
+    await Profile.deleteMany({});
+    console.log('Cleared existing book lists and profiles');
 
-    // Insert new data
+    // Create book lists
     await BookList.insertMany(initialData);
+    
+    // Create profiles for each owner
+    const profiles = initialData.map(data => ({
+      owner: data.owner,
+      bio: '',  // Default empty bio
+      profilePicture: null  // Default no profile picture
+    }));
+    
+    await Profile.insertMany(profiles);
+    
     console.log('Database seeded successfully');
 
     // Disconnect from MongoDB
