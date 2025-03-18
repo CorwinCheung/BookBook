@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const path = require('path');
 
 // Load environment variables
 dotenv.config();
@@ -34,15 +33,7 @@ const bookListRoutes = require('./routes/bookList');
 // Use routes
 app.use('/api/booklists', bookListRoutes);
 
-// Serve static assets if in production
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static(path.join(__dirname, '../client/build')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
-  });
-}
+// Remove all static file serving and catch-all route since frontend is on GitHub Pages
 
 // Set port
 const PORT = process.env.PORT || 5001;
